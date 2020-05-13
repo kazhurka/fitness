@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+
+  background: linear-gradient(37.72deg, #003d85 20.6%, #b80027 76.31%);
+  background-repeat: no-repeat;
+  background-size: auto 658px;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 70%;
+}
+
+.logo:active {
+  opacity: 50%;
+}
+
+.button {
+  list-style: none;
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 70%;
+}
+
+.button:active {
+  opacity: 50%;
+}
+
+@media (max-width: $desktop-width) {
+  body {
+    background-size: auto 554px;
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  body {
+    background-size: auto 491px;
+  }
+}

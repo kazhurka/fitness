@@ -1,0 +1,66 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 28px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  font-size: 26px;
+  line-height: 26px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+}
+
+.main-header__phone a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-header__phone a:hover {
+  opacity: 70%;
+}
+
+.main-header__phone a:active {
+  opacity: 50%;
+}
+
+@media (max-width: $desktop-width) {
+  .main-header {
+    box-sizing: border-box;
+    min-width: 768px;
+    margin-bottom: 17px;
+    padding-top: 40px;
+    padding-right: 5.8%;
+    padding-left: 5.8%;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .main-header__logo svg {
+    width: 82px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-header {
+    padding-top: 16px;
+    min-width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .main-header__logo svg {
+    width: 68px;
+  }
+
+  .main-header__phone {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+}

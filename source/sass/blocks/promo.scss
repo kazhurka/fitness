@@ -1,0 +1,148 @@
+.promo {
+  position: relative;
+
+  display: flex;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+}
+
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 398px;
+  min-height: 353px;
+  margin-right: 5.2%;
+  padding-top: 63px;
+}
+
+.promo__services {
+  position: absolute;
+  top: 302px;
+  left: 2.4%;
+}
+
+.promo__services p {
+  width: 113px;
+  margin: 0;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  text-align: right;
+  color: #ffffff;
+}
+
+.promo__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 227px;
+  height: 53px;
+  margin-top: 60px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  border: 4px solid #ffffff;
+}
+
+.promo__social {
+  position: absolute;
+  top: 433px;
+  right: 0.7%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 78px;
+
+  text-align: right;
+}
+
+.promo__social a {
+  display: flex;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (max-width: $desktop-width) {
+  .promo {
+    box-sizing: border-box;
+    min-width: 768px;
+    padding-right: 5.8%;
+    padding-left: 5.8%;
+  }
+
+  .promo img {
+    width: 324px;
+    height: 390px;
+  }
+
+  .promo__link {
+    width: 175px;
+    margin-top: 47px;
+  }
+
+  .promo__social {
+    display: none;
+  }
+
+  .promo__container {
+    padding-top: 0;
+    margin-right: 4.8%;
+  }
+
+  .promo__services {
+    top: 186px;
+    left: 5.4%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo {
+    min-width: 320px;
+    padding-left: 4.6%;
+    padding-right: 4.6%;
+  }
+
+  .promo img {
+    display: none;
+  }
+
+  .promo__container {
+    align-items: center;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .promo__link {
+    height: 63px;
+    margin-top: 47px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .promo__services {
+    top: 176px;
+    left: 4%;
+  }
+}
