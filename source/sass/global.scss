@@ -41,8 +41,13 @@ body {
   opacity: 50%;
 }
 
+.bg-wrap {
+  background: #f8f9fc;
+}
+
 @media (max-width: $desktop-width) {
   body {
+    background-repeat: no-repeat;
     background-size: auto 554px;
   }
 }
@@ -50,6 +55,7 @@ body {
 
 @media (max-width: $tablet-width) {
   body {
+    background-repeat: no-repeat;
     background-size: auto 491px;
   }
 }
