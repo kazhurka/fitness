@@ -1,6 +1,6 @@
 .main-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   max-width: 1160px;
   margin: 0 auto;
@@ -15,16 +15,22 @@
   letter-spacing: 0.03em;
 }
 
-.main-header__phone a {
+.main-header__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__phone {
   color: #ffffff;
   text-decoration: none;
 }
 
-.main-header__phone a:hover {
+.main-header__phone :hover {
   opacity: 70%;
 }
 
-.main-header__phone a:active {
+.main-header__phone :active {
   opacity: 50%;
 }
 
@@ -32,8 +38,8 @@
   .main-header {
     box-sizing: border-box;
     min-width: 768px;
-    margin-bottom: 17px;
     padding-top: 40px;
+    padding-bottom: 30px;
     padding-right: 5.8%;
     padding-left: 5.8%;
 
