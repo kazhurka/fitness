@@ -1,0 +1,237 @@
+.crossfit {
+  box-sizing: border-box;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 77px;
+  padding-right: 10px;
+  padding-bottom: 87px;
+  padding-left: 10px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #ffffff;
+
+  background: #ed0233;
+  background-image: url("../img/hit.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.crossfit__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 43%;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.crossfit h2 {
+  width: 201px;
+  margin: 0;
+  margin-right: 50px;
+
+  list-style: none;
+  font-size: 90px;
+  line-height: 93px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.crossfit p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 48px;
+}
+
+.crossfit__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 343px;
+  height: 67px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+
+  background-color: transparent;
+  border: 4px solid #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+
+.crossfit__link:hover {
+  opacity: 70%;
+}
+
+.crossfit__link:active {
+  opacity: 50%;
+}
+
+.crossfit__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.crossfit__info-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.crossfit__info-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+
+  height: 1px;
+
+  background-color: #ffffff;
+}
+
+.crossfit__info-item--date::after {
+  top: 33px;
+
+  width: 64px;
+}
+
+.crossfit__info-item--time::after {
+  top: 32px;
+
+  width: 88px;
+}
+
+.crossfit__info-item h3 {
+  margin: 0;
+
+  list-style: none;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.crossfit__info-item p {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.crossfit__info-item span {
+  display: inline-block;
+  width: 28px;
+  margin-left: 7px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+@media (max-width: $desktop-width) {
+  .crossfit {
+    box-sizing: border-box;
+    width: 678px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 45px;
+    padding-bottom: 53px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+
+    background-image: url("../img/hit-tablet.png");
+  }
+
+  .crossfit p {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .crossfit__container {
+    box-sizing: border-box;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  .crossfit h2 {
+    width: 117px;
+    margin-right: 25px;
+
+    font-size: 52px;
+    line-height: 52px;
+    letter-spacing: 0.03em;
+  }
+
+  .crossfit__link {
+    width: 202px;
+    height: 39px;
+
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .crossfit__info-item h3 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .crossfit__info-item p {
+    margin-bottom: 0;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .crossfit__info-item span {
+    margin-left: 3px;
+
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .crossfit__info-item--date::after {
+    top: 19px;
+
+    width: 42px;
+  }
+
+  .crossfit__info-item--time::after {
+    top: 19px;
+
+    width: 46px;
+  }
+
+  @media (max-width: $tablet-width) {
+    .crossfit {
+      width: 290px;
+      min-height: 584px;
+
+      background-image: url("../img/hit-mobile.png");
+      background-position: bottom;
+    }
+
+    .crossfit__container {
+      width: 100%;
+    }
+  }
+}
