@@ -24,6 +24,16 @@ body {
   opacity: 50%;
 }
 
+button {
+  list-style: none;
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+
 .button {
   list-style: none;
   text-decoration: none;
@@ -31,6 +41,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+  background: transparent;
 }
 
 .button:hover {

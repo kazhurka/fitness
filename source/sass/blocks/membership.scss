@@ -20,6 +20,7 @@
 }
 
 .membership::after {
+  display: none;
   content: "";
   position: absolute;
   right: -9.5%;

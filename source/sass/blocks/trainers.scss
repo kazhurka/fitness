@@ -1,0 +1,190 @@
+.trainers {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 115px;
+  padding-right: 10px;
+  padding-bottom: 112px;
+  padding-left: 10px;
+}
+
+.trainers ul {
+  width: 9999px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+
+  transition: margin-left 250ms;
+}
+
+.trainers h2 {
+  margin: 0;
+  margin-bottom: 30px;
+
+  list-style: none;
+  font-size: 49px;
+  line-height: 49px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  color: #102654;
+  letter-spacing: 0.03em;
+}
+
+.trainers li {
+  position: relative;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 260px;
+  height: 294px;
+  margin-right: 40px;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+.trainers li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: transparent;
+}
+
+.trainers li:hover::before {
+  background: rgba(16, 38, 84, 0.79);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.trainers__members {
+  overflow: hidden;
+}
+
+.trainers__members h3 {
+  position: absolute;
+  bottom: 25px;
+  left: 80px;
+
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #ffffff;
+}
+
+.trainers__members span {
+  position: absolute;
+  top: 74px;
+  left: 100px;
+
+  display: none;
+  width: 53px;
+
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #b6bdcc;
+}
+
+
+
+.trainers__info {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+
+  display: none;
+  width: 160px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.trainers__info p {
+  position: relative;
+
+  width: 150px;
+  margin: 0;
+  margin-bottom: 24px;
+  padding-left: 15px;
+}
+
+.trainers__info p::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.trainers li:hover h3 {
+  top: -170px;
+  left: 54px;
+}
+
+.trainers li:hover span {
+  display: block;
+}
+
+.trainers li:hover .trainers__info {
+  display: block;
+}
+
+
+.trainers__button button {
+  position: absolute;
+  top: 400px;
+
+  width: 20px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.trainers__button--left button {
+  left: -40px;
+
+  background-image: url("../img/arrow-left.svg");
+}
+
+.trainers__button--right button {
+  right: -40px;
+
+  background-image: url("../img/arrow-right.svg");
+}
+
+@media (max-width: $desktop-width) {
+  .trainers {
+    display: none;
+    padding-bottom: 51px;
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+.trainers {
+  display: none;
+}
+}
