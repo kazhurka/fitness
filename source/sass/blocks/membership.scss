@@ -5,7 +5,6 @@
   flex-direction: column;
   max-width: 1160px;
   margin: 0 auto;
-  margin-bottom: 121px;
   padding-top: 115px;
   padding-right: 10px;
   padding-bottom: 115px;
@@ -262,7 +261,6 @@
   .membership {
     box-sizing: border-box;
     min-width: 768px;
-    margin-bottom: 84px;
     padding-top: 97px;
     padding-right: 5.8%;
     padding-left: 5.8%;
@@ -328,7 +326,6 @@
 @media (max-width: $tablet-width) {
   .membership {
     min-width: 320px;
-    margin-bottom: 69px;
     padding-top: 68px;
     padding-right: 4.6%;
     padding-bottom: 70px;
