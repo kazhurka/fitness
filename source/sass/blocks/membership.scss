@@ -129,7 +129,7 @@
 .membership__wrap {
   margin: 5px;
   padding-top: 57px;
-  padding-bottom: 66px;
+  padding-bottom: 62px;
 }
 
 .membership__offers li:hover .membership__wrap {
@@ -140,7 +140,9 @@
   color: #ffffff;
 
   background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
-  border: none;
+  border:none;
+  width: 210px;
+  height: 68px;
 }
 
 .membership__offers h3 {
@@ -334,7 +336,7 @@
 
   .membership__wrap {
     padding-top: 45px;
-    padding-bottom: 52px;
+    padding-bottom: 49px;
   }
 
   .membership h2 {

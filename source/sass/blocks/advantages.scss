@@ -22,14 +22,10 @@
 }
 
 .advantages__items {
+  width: 1040px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  min-height: 400px;
   margin: 0 auto;
-  padding-right: 60px;
-  padding-left: 60px;
+  flex-wrap: wrap;
 }
 
 .advantages__group {
@@ -42,12 +38,16 @@
 
   display: flex;
   box-sizing: border-box;
-  width: 355px;
-  min-height: 235px;
+  width: 346px;
+  height: 235px;
   padding-top: 64px;
-  padding-right: 10px;
+  padding-right: 5px;
   padding-bottom: 10px;
-  padding-left: 159px;
+  padding-left: 165px;
+}
+
+.advantages__item:nth-of-type(2n) {
+  margin-left: calc(100% - 2 *346px);
 }
 
 .advantages__item h3 {
@@ -78,8 +78,9 @@
 
 .advantages__highlight {
   position: absolute;
-  top: 34%;
-  left: 39.8%;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   box-sizing: border-box;
   width: 240px;
@@ -130,11 +131,15 @@
 
 
 .advantages__item--parking {
-  padding-left: 117px;
+  padding-left: 109px;
 }
 
 .advantages__item--experience {
-  padding-left: 117px;
+  padding-left: 109px;
+}
+
+.advantages__item--comfort {
+  padding-left: 158px;
 }
 
 .advantages__item--square::before {
@@ -150,13 +155,13 @@
 }
 
 .advantages__item--experience::before {
-  left: 15px;
+  left: 7px;
 
   background-image: url("../img/experience.png");
 }
 
 .advantages__item--parking::before {
-  left: 15px;
+  left: 7px;
 
   background-image: url("../img/parking.png");
 }
@@ -176,9 +181,9 @@
     box-sizing: border-box;
     width: 768px;
     padding-top: 97px;
-    padding-right: 5.8%;
+    padding-right: 45px;
     padding-bottom: 67px;
-    padding-left: 5.8%;
+    padding-left: 45px;
   }
 
   .advantages h2 {
@@ -187,9 +192,13 @@
   }
 
   .advantages__items {
-    min-height: 550px;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin: 0 auto;
+    width: 678px;
+    min-height: 552px;
+    padding-left: 0;
+    padding-right: 0;
+    align-content: space-between;
+    box-sizing: border-box;
   }
 
   .advantages__group {
@@ -197,18 +206,27 @@
   }
 
   .advantages__item {
-    width: 340px;
+    width: 320px;
     min-height: 150px;
-    padding-top: 47px;
-    padding-left: 108px;
+    height: fit-content;
+    padding-top: 48px;
+    padding-left: 117px;
+  }
+
+  .advantages__item--space-after {
+    margin-bottom: 250px;
+  }
+
+  .advantages__item:nth-of-type(2n) {
+    margin-left: 35px;
   }
 
   .advantages__item--parking {
-    padding-left: 93px;
+    padding-left: 87px;
   }
 
   .advantages__item--experience {
-    padding-left: 92px;
+    padding-left: 87px;
   }
 
   .advantages__item h3 {
@@ -221,40 +239,38 @@
   }
 
   .advantages__item::before {
-    top: 36%;
+    top: 37%;
 
     width: 90px;
     height: 70px;
   }
 
   .advantages__item--square::before {
-    left: -10px;
+    left: 0;
 
     background-image: url("../img/square-tablet.png");
   }
 
   .advantages__item--comfort::before {
-    left: -10px;
+    left: 0;
 
     background-image: url("../img/occupancy-tablet.png");
   }
 
   .advantages__item--experience::before {
-    left: 15px;
+    left: 0;
 
     background-image: url("../img/experience-tablet.png");
   }
 
   .advantages__item--parking::before {
-    left: 15px;
+    left: 0;
 
     background-image: url("../img/parking-tablet.png");
   }
 
   .advantages__highlight {
-    top: 40.5%;
-    left: 21%;
-
+    top: 427px;
     width: 442px;
     height: 239px;
     padding-top: 22px;
@@ -290,6 +306,7 @@
   }
 
   .advantages__items {
+    width: 320px;
     flex-direction: column;
     margin: 0 auto;
     padding: 0;
@@ -302,14 +319,22 @@
   }
 
   .advantages__item {
+    width: 100%;
     box-sizing: border-box;
-    width: 320px;
     min-height: 200px;
     margin: 0 auto;
     padding: 0;
     padding-right: 45px;
     padding-bottom: 10px;
     padding-left: 45px;
+  }
+
+  .advantages__item--space-after {
+    margin-bottom: 289px;
+  }
+
+  .advantages__item:nth-of-type(2n) {
+    margin-left: 0;
   }
 
   .advantages__item h3 {
@@ -323,8 +348,7 @@
   }
 
   .advantages__highlight {
-    position: static;
-
+    top: 645px;
     width: 100%;
     margin-bottom: 50px;
   }
