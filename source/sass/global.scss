@@ -56,10 +56,46 @@ button {
   background: #f8f9fc;
 }
 
+.container-bottom {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #102654 0%, #102654 50%, #ffffff 50%);
+}
+
+.reviews {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
 @media (max-width: $desktop-width) {
   body {
     background-repeat: no-repeat;
     background-size: auto 554px;
+  }
+
+  .container-bottom {
+    flex-direction: column;
+    min-height: 675px;
+    background: none;
+    background-color: #ffffff;
+
   }
 }
 

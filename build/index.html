@@ -458,38 +458,45 @@
         </li>
       </ul>
     </section>
-    <section class="try-for-free">
-      <form>
-        <input type="text" id="customer-name">
-        <label for="customer-name">Имя</label>
-        <input type="phone" id="customer-phone">
-        <label for="customer-phone">Телефон</label>
-        <div class="try-for-free__button">
-          <button type="submit">Отправить</button>
-        </div>
-      </form>
-    </section>
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <div class="contacts__items">
-        <div class="contacts__item">
-          <h3>Адрес:</h3>
-          <p>г. Омск, ул. 60 лет Октября, 7</p>
-        </div>
-        <div class="contacts__item">
-          <h3>Телефон::</h3>
-          <p>8-800-555-55-55</p>
-        </div>
-        <div class="contacts__item">
-          <h3>График работы::</h3>
-          <p>Пн-Вс: с 8:00 до 22:00</p>
-        </div>
-        <div class="contacts__item">
-          <h3>Email::</h3>
-          <p>omsk@supergym.ru</p>
-        </div>
+    <div class="container-bottom">
+      <div class="try-for-free__wrap">
+        <section class="try-for-free">
+          <h2>Бесплатное занятие</h2>
+          <form>
+            <input type="text" id="customer-name" placeholder="Имя">
+            <label class="visually-hidden" for="customer-name">Имя</label>
+
+            <input type="phone" id="customer-phone" placeholder="Телефон">
+            <label class="visually-hidden" for="customer-phone">Телефон</label>
+            <div class="try-for-free__button">
+              <button type="submit">Отправить</button>
+            </div>
+          </form>
+        </section>
       </div>
-    </section>
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <div class="contacts__items">
+          <div class="contacts__item contacts__item--address">
+            <h3>Адрес:</h3>
+            <p>г. Омск, ул. 60 лет Октября, 7</p>
+          </div>
+          <div class="contacts__item contacts__item--phone">
+            <h3>Телефон:</h3>
+            <p>8-800-555-55-55</p>
+          </div>
+
+          <div class="contacts__item contacts__item--time">
+            <h3>График работы:</h3>
+            <p>Пн-Вс: с 8:00 до 22:00</p>
+          </div>
+          <div class="contacts__item contacts__item--e-mail">
+            <h3>Email:</h3>
+            <p>omsk@supergym.ru</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
   <footer class="main-footer">
     <a class="logo main-footer__logo"><svg width="87" height="20" viewBox="0 0 87 20" fill="none" xmlns="http://www.w3.org/2000/svg">
