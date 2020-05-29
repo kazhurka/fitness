@@ -2,11 +2,13 @@
   box-sizing: border-box;
   width: 100%;
   padding-top: 60px;
-  padding-right: 167px;
-  padding-bottom: 49px;
-  padding-left: 103px;
+  padding-right: 30px;
+  padding-bottom: 7px;
+  padding-left: 30px;
 
   color: #ffffff;
+
+  background-color: #102654;
 }
 
 .try-for-free__wrap {
@@ -14,16 +16,24 @@
   max-width: 683px;
 }
 
+.try-for-free form {
+  padding-right: 138px;
+  padding-left: 72px;
+}
+
 .try-for-free h2 {
+  box-sizing: border-box;
   width: 100%;
   margin: 0;
   margin-bottom: 34px;
+  padding-right: 75px;
+  padding-left: 72px;
 
   list-style: none;
   font-weight: normal;
   font-size: 49px;
   line-height: 64px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", "Arial", sans-serif;
   letter-spacing: 0.03em;
 }
 
@@ -94,7 +104,6 @@
   line-height: 16px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
-  ;
 }
 
 @media (max-width: $desktop-width) {
@@ -111,11 +120,17 @@
     min-height: 324px;
     padding-top: 66px;
     padding-right: 160px;
-    padding-bottom: 73px;
+    padding-bottom: 68px;
     padding-left: 133px;
   }
 
+  .try-for-free form {
+    padding: 0;
+  }
+
   .try-for-free h2 {
+    padding: 0;
+
     font-size: 42px;
     line-height: 42px;
     letter-spacing: 0.03em;

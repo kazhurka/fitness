@@ -1,7 +1,8 @@
 .trainers {
   position: relative;
 
-  display: flex;
+  // display: flex;
+  display: none;
   flex-direction: column;
   max-width: 1160px;
   margin: 0 auto;
@@ -99,8 +100,6 @@
   color: #b6bdcc;
 }
 
-
-
 .trainers__info {
   position: absolute;
   bottom: 30px;
@@ -184,7 +183,7 @@
 
 
 @media (max-width: $tablet-width) {
-.trainers {
-  display: none;
-}
+  .trainers {
+    display: none;
+  }
 }
