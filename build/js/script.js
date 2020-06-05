@@ -41,3 +41,54 @@ buttonsListEl.forEach(function (item) {
 
   };
 });
+
+// trainers-slider
+
+(function () {
+  var slider = document.querySelector('.trainers');
+  var picsList = document.querySelector('.trainers__members ul');
+  var picsListEl = document.querySelectorAll('.trainers__members li');
+
+  if (!(slider && picsList && picsListEl)) {
+    return;
+  }
+
+  var position = 0;
+
+  var widthPic = 300;
+  var countPic = 2;
+
+  var getParam = function () {
+    if (window.screen.width < 1366 && window.screen.width > 767) {
+      widthPic = 298;
+      countPic = 2;
+    } else {
+      if (window.screen.width < 768) {
+        widthPic = 256;
+        countPic = 1;
+
+      } else {
+        widthPic = 300;
+        countPic = 4;
+      }
+    }
+  };
+
+  getParam();
+
+
+  slider.querySelector('.trainers__button--left button').onclick = function () {
+    position += widthPic * countPic;
+    position = Math.min(position, 0);
+    picsList.style.marginLeft = position + 'px';
+
+  };
+
+  slider.querySelector('.trainers__button--right button').onclick = function () {
+    position -= widthPic * countPic;
+    position = Math.max(position, -widthPic * (picsListEl.length - countPic));
+    picsList.style.marginLeft = position + 'px';
+  };
+
+
+})();

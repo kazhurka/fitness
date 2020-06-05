@@ -1,4 +1,9 @@
 body {
+  padding: 0;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
 
   font-style: normal;
@@ -6,10 +11,13 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
-
-  background: linear-gradient(37.72deg, #003d85 20.6%, #b80027 76.31%);
+  background: linear-gradient(37.72deg, rgb(0, 61, 133) 20.6%, rgb(184, 0, 39) 76.31%);
   background-repeat: no-repeat;
   background-size: auto 658px;
+}
+
+.content {
+  flex: 1;
 }
 
 .logo {
@@ -58,10 +66,6 @@ button {
 
 .container-bottom {
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
-
-  background: linear-gradient(to right, #102654 0%, #102654 50%, #ffffff 50%);
 }
 
 .bg-wrap-footer {
@@ -107,7 +111,6 @@ button {
 
 @media (max-width: $tablet-width) {
   body {
-    background-repeat: no-repeat;
-    background-size: auto 491px;
+    background: none;
   }
 }

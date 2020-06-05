@@ -1,4 +1,5 @@
 .special-offers {
+  outline: red;
   max-width: 1160px;
   margin: 0 auto;
   padding-top: 121px;
@@ -46,7 +47,7 @@
   height: 100%;
   padding-top: 16px;
   padding-right: 30px;
-  padding-bottom: 22px;
+  padding-bottom: 26px;
   padding-left: 27px;
 
   background: #ffffff;
@@ -55,7 +56,6 @@
 .special-offers__wrap {
   box-sizing: border-box;
   height: fit-content;
-  min-height: 211px;
   margin-bottom: 39px;
   padding: 8px;
 
@@ -111,11 +111,10 @@
   box-sizing: border-box;
   width: 560px;
   height: fit-content;
-  min-height: 462px;
   margin-right: 40px;
   padding-top: 35px;
   padding-right: 320px;
-  padding-bottom: 40px;
+  padding-bottom: 47px;
   padding-left: 45px;
 
   background: #ed0233;
@@ -252,9 +251,8 @@
 
   .special-offers__main-item {
     width: 290px;
-    min-height: 598px;
     padding-right: 48px;
-    padding-bottom: 330px;
+    padding-bottom: 344px;
 
     background-image: url("../img/girl-in-blue-mobile.png");
     background-position: bottom;

@@ -1,11 +1,11 @@
 .info {
   position: relative;
-
+  outline: red;
   display: flex;
   justify-content: space-between;
   max-width: 1160px;
   margin: 0 auto;
-  padding-top: 114px;
+  padding-top: 120px;
   padding-bottom: 229px;
   padding-right: 10px;
   padding-left: 10px;
@@ -107,7 +107,7 @@
     align-items: center;
     box-sizing: border-box;
     min-width: 768px;
-    padding-top: 82px;
+    padding-top: 85px;
     padding-bottom: 177px;
     padding-right: 5.8%;
     padding-left: 5.8%;

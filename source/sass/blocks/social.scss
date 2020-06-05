@@ -1,4 +1,5 @@
 .social {
+  outline: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,6 +14,14 @@
 
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.social__item:hover {
+  opacity: 70%;
+}
+
+.social__item:active {
+  opacity: 50%;
 }
 
 .social__item--facebook {
@@ -33,7 +42,7 @@
   width: 25px;
   height: 14px;
 
-  background-image: url("../../img/vk-icon.svg");
+  background-image: url("../img/vk-icon.svg");
 }
 
 @media (max-width: $desktop-width) {

@@ -1,4 +1,5 @@
 .main-footer {
+  outline: red;
   display: flex;
   width: 100%;
   max-width: 1160px;
@@ -39,6 +40,14 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
   text-decoration: none;
+}
+
+.main-footer__nav a:hover {
+  opacity: 70%;
+}
+
+.main-footer__nav a:active {
+  opacity: 50%;
 }
 
 .main-footer__nav a:last-of-type {

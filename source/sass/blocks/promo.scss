@@ -1,4 +1,5 @@
 .promo {
+  outline: red;
   position: relative;
 
   display: flex;
@@ -12,8 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 395px;
-  min-height: 353px;
+  width: 387px;
   margin-right: 5.4%;
   padding-top: 63px;
 }
@@ -60,21 +60,20 @@
 }
 
 .promo__social {
-  position: absolute;
+  position: relative;
   top: 433px;
-  right: 0%;
+  left: 99%;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 78px;
 
   text-align: right;
 }
 
-.promo__social a {
+.promo__social-item {
   display: flex;
   align-items: center;
+
 
   font-style: normal;
   font-weight: normal;
@@ -84,6 +83,11 @@
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.promo__social-item:last-of-type {
+  margin-bottom: 0;
 }
 
 @media (max-width: $desktop-width) {
@@ -142,6 +146,6 @@
 
   .promo__services {
     top: 193px;
-    left: 0%;
+    left: -2px;
   }
 }

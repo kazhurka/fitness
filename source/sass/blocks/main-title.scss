@@ -9,14 +9,12 @@
   font-family: "Bebas Neue", "Arial", sans-serif;
   text-align: right;
   color: #ffffff;
-  letter-spacing: 0.03em;
 }
 
 .main-title span {
   font-weight: normal;
   font-size: 49px;
   line-height: 49px;
-  letter-spacing: 0.03em;
 }
 
 @media (max-width: $desktop-width) {
@@ -37,7 +35,7 @@
 
 @media (max-width: $tablet-width) {
   .main-title {
-    width: 286px;
+    width: 290px;
     font-size: 78px;
     line-height: 78px;
   }
@@ -45,7 +43,6 @@
   .main-title span {
     font-size: 28px;
     line-height: 28px;
-    letter-spacing: 0.03em;
     margin-bottom: 8px;
   }
 }
