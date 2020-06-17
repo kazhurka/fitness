@@ -186,6 +186,10 @@
   background-image: url("../img/arrow-right.svg");
 }
 
+.trainers li:last-of-type {
+  margin-right: 0;
+}
+
 @media (max-width: $desktop-width) {
   .trainers {
     box-sizing: border-box;

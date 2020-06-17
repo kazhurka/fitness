@@ -92,3 +92,55 @@ buttonsListEl.forEach(function (item) {
 
 
 })();
+
+
+// reviews-slider
+
+(function () {
+  var slider = document.querySelector('.reviews');
+  var picsList = document.querySelector('.reviews ul');
+  var picsListEl = document.querySelectorAll('.reviews li');
+
+  if (!(slider && picsList && picsListEl)) {
+    return;
+  }
+
+  var position = 0;
+
+  var widthPic = 580;
+  var countPic = 1;
+
+  var getParam = function () {
+    if (window.screen.width < 1366 && window.screen.width > 767) {
+      widthPic = 566;
+      countPic = 1;
+    } else {
+      if (window.screen.width < 768) {
+        widthPic = 226;
+        countPic = 1;
+
+      } else {
+        widthPic = 560;
+        countPic = 1;
+      }
+    }
+  };
+
+  getParam();
+
+
+  slider.querySelector('.reviews__button--left button').onclick = function () {
+    position += widthPic * countPic;
+    position = Math.min(position, 0);
+    picsList.style.marginLeft = position + 'px';
+
+  };
+
+  slider.querySelector('.reviews__button--right button').onclick = function () {
+    position -= widthPic * countPic;
+    position = Math.max(position, -widthPic * (picsListEl.length - countPic));
+    picsList.style.marginLeft = position + 'px';
+  };
+
+
+})();

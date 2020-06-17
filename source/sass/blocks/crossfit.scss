@@ -5,7 +5,6 @@
   padding-top: 121px;
   padding-bottom: 20px;
 
-
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -13,26 +12,31 @@
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
 
-
   background-repeat: no-repeat;
 }
+
+.crossfit__wrap {
+  box-sizing: border-box;
+  width: 100%;
+
+  background-color: #ed0233;
+  background-image: url("../img/hit.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 57% 100%;
+}
+
 
 .crossfit__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  width: 100%;
-  padding-top: 76px;
-  padding-right: 696px;
-  padding-bottom: 88px;
-  padding-left: 78px;
-
-  background: #ed0233;
-  background-image: url("../img/hit.png");
-  background-position: 100% 0;
-  background-size: 57% 100%;
-  background-repeat: no-repeat;
   box-sizing: border-box;
+  width: 500px;
+  padding-top: 80px;
+  padding-right: 70px;
+  padding-bottom: 80px;
+  padding-left: 70px;
 }
 
 .crossfit h2 {
@@ -58,7 +62,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 343px;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -88,6 +92,7 @@
 .crossfit__info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .crossfit__info-item {
@@ -104,10 +109,10 @@
 
 
 .crossfit__info-item h3 {
-  margin: 0;
   width: fit-content;
   min-width: 63px;
-  border-bottom: 1px solid #ffffff;
+  margin: 0;
+
   list-style: none;
   font-weight: normal;
   font-size: 18px;
@@ -118,21 +123,23 @@
   min-width: 86px;
 }
 
+
 .crossfit__info-item p {
   display: block;
-
   margin: 0;
 
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 125%;
+
+  border-top: 1px solid #ffffff;
 }
 
-.crossfit__info-item span {
 
+.crossfit__info-item span {
   display: inline-block;
-  width: 40px;
+  width: 35px;
   margin-left: 7px;
 
   font-style: normal;
@@ -162,14 +169,18 @@
     margin-bottom: 30px;
   }
 
-  .crossfit__container {
-    box-sizing: border-box;
+  .crossfit__wrap {
     background-image: url("../img/hit-tablet.png");
     background-size: 57% 100%;
+  }
+
+  .crossfit__container {
+    box-sizing: border-box;
+    width: 292px;
     padding-top: 48px;
-    padding-right: 406px;
+    padding-right: 40px;
     padding-bottom: 51px;
-    padding-left: 48px;
+    padding-left: 40px;
   }
 
   .crossfit h2 {
@@ -183,9 +194,9 @@
   }
 
   .crossfit__link {
-    width: 202px;
     padding-top: 10px;
     padding-bottom: 10px;
+
     font-size: 10px;
     line-height: 12px;
   }
@@ -196,6 +207,7 @@
 
   .crossfit__info-item h3 {
     min-width: 42px;
+
     font-size: 12px;
     line-height: 18px;
   }
@@ -213,7 +225,9 @@
     line-height: 34px;
   }
 
+
   .crossfit__info-item span {
+    width: 30px;
     margin-left: 3px;
 
     font-size: 10px;
@@ -227,17 +241,20 @@
     padding-top: 70px;
   }
 
-  .crossfit__container {
-    padding-top: 45px;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-bottom: 340px;
-    width: 100%;
+  .crossfit__wrap {
+    min-height: 584px;
 
     background-image: url("../img/hit-mobile.png");
-    background-size: 100% auto;
     background-position: bottom;
-    min-height: 584px;
+    background-size: 100% auto;
+  }
+
+  .crossfit__container {
+    width: 100%;
+    padding-top: 45px;
+    padding-right: 45px;
+    padding-bottom: 45px;
+    padding-left: 45px;
   }
 
   .crossfit__info-item h3 {

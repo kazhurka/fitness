@@ -1,23 +1,21 @@
 body {
-  padding: 0;
-  min-width: 320px;
   display: flex;
+  position: relative;
   flex-direction: column;
+  min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  padding: 0;
 
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+
   background: linear-gradient(37.72deg, rgb(0, 61, 133) 20.6%, rgb(184, 0, 39) 76.31%);
   background-repeat: no-repeat;
-  background-size: auto 658px;
-}
-
-.content {
-  flex: 1;
+  background-size: auto 654px;
 }
 
 .logo {
@@ -68,7 +66,11 @@ button {
   display: flex;
 }
 
+// .content {
+//   display: none;
+// }
 .bg-wrap-footer {
+  // margin-top: auto;
   background-color: #030a1a;
 }
 

@@ -1,6 +1,4 @@
 .membership {
-  outline: red;
-  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -22,11 +20,11 @@
 .membership::after {
   content: "";
   position: absolute;
-  right: -9.3%;
-  bottom: -9.3%;
+  right: -1.7%;
+  top: 32%;
   z-index: 0;
 
-  width: 303px;
+  width: 301px;
   height: 421px;
 
   background-image: url("../img/weight.png");
@@ -298,8 +296,7 @@
   }
 
   .membership::after {
-    right: -10px;
-    bottom: -36px;
+    top: 40.5%;
 
     width: 358px;
     height: 371px;
