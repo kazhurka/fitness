@@ -1,5 +1,4 @@
 .membership {
-
   display: flex;
   flex-direction: column;
   max-width: 1160px;
@@ -20,11 +19,11 @@
 .membership::after {
   content: "";
   position: absolute;
-  right: -1.7%;
-  top: 32%;
+  top: 32.7%;
+  right: 0%;
   z-index: 0;
 
-  width: 301px;
+  width: 287px;
   height: 421px;
 
   background-image: url("../img/weight.png");
@@ -57,7 +56,7 @@
 .membership__duration::after {
   content: "";
   position: absolute;
-  top: 52px;
+  top: 50px;
   left: 0;
 
   width: 346px;
@@ -67,8 +66,9 @@
 }
 
 .membership__button button {
-  padding: 0;
   margin: 0;
+  padding: 0;
+
   list-style: none;
   font-style: normal;
   font-weight: normal;
@@ -83,7 +83,11 @@
   cursor: pointer;
 }
 
-.membership__button:hover {
+.membership__button button:hover {
+  opacity: 70%;
+}
+
+.membership__button button:focus {
   opacity: 70%;
 }
 
@@ -136,14 +140,17 @@
   background-color: white;
 }
 
+
 .membership__offers li:hover .membership__link {
+  width: 210px;
+  height: 68px;
+
   color: #ffffff;
 
   background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
   border: none;
-  width: 210px;
-  height: 68px;
 }
+
 
 .membership__offers h3 {
   margin: 0;
@@ -264,8 +271,8 @@
     box-sizing: border-box;
     min-width: 768px;
     padding-top: 97px;
-    padding-bottom: 100px;
     padding-right: 5.8%;
+    padding-bottom: 100px;
     padding-left: 5.8%;
   }
 
@@ -296,7 +303,7 @@
   }
 
   .membership::after {
-    top: 40.5%;
+    top: 40.3%;
 
     width: 358px;
     height: 371px;

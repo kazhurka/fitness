@@ -1,6 +1,7 @@
 body {
-  display: flex;
   position: relative;
+
+  display: flex;
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
@@ -12,14 +13,15 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
-
-  background: linear-gradient(37.72deg, rgb(0, 61, 133) 20.6%, rgb(184, 0, 39) 76.31%);
-  background-repeat: no-repeat;
-  background-size: auto 654px;
 }
 
 .logo {
   text-decoration: none;
+}
+
+.bg-wrap-header {
+  background: linear-gradient(37.72deg, rgb(0, 61, 133) 20.6%, rgb(184, 0, 39) 76.31%);
+  background-repeat: no-repeat;
 }
 
 .logo:hover {
@@ -58,6 +60,10 @@ button {
   opacity: 50%;
 }
 
+.button:focus {
+  opacity: 70%;
+}
+
 .bg-wrap {
   background: #f8f9fc;
 }
@@ -66,11 +72,10 @@ button {
   display: flex;
 }
 
-// .content {
-//   display: none;
-// }
+
 .bg-wrap-footer {
-  // margin-top: auto;
+  margin-top: auto;
+
   background-color: #030a1a;
 }
 
@@ -96,23 +101,11 @@ button {
 }
 
 @media (max-width: $desktop-width) {
-  body {
-    background-repeat: no-repeat;
-    background-size: auto 554px;
-  }
-
   .container-bottom {
     flex-direction: column;
     min-height: 675px;
 
     background: none;
     background-color: #ffffff;
-  }
-}
-
-
-@media (max-width: $tablet-width) {
-  body {
-    background: none;
   }
 }
