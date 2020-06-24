@@ -22,7 +22,7 @@
 
 .info__video {
   position: absolute;
-  top: 53.5%;
+  top: 400px;
   left: 38%;
 
   width: 364px;
@@ -153,7 +153,8 @@
   }
 
   .info__video {
-    top: 68.7%;
+    top: auto;
+    bottom: 100px;
     left: 33%;
     width: 266px;
     height: 167px;

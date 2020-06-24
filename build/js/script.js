@@ -2,14 +2,19 @@
 
 
 var membershipLink = document.querySelector('#to-membership');
-membershipLink.onclick = function (evt) {
+var membershipLinkFooter = document.querySelector('#to-membership-footer')
+
+var scrollPageHandler = function (evt) {
   evt.preventDefault();
   window.scroll({
     top: 1400,
     left: 0,
     behavior: 'smooth'
   });
-};
+}
+
+membershipLink.addEventListener('click', scrollPageHandler);
+membershipLinkFooter.addEventListener('click', scrollPageHandler);
 
 (function () {
   var buttonsListEl = document.querySelectorAll('.membership__button');
@@ -71,17 +76,23 @@ membershipLink.onclick = function (evt) {
   var countPic = 2;
 
   var getParam = function () {
-    if (window.screen.width < 1366 && window.screen.width > 767) {
-      widthPic = 298;
-      countPic = 2;
+    if (window.screen.width < 1300 && window.screen.width > 1200) {
+      widthPic = 300;
+      countPic = 3;
+      console.log('grt')
     } else {
-      if (window.screen.width < 768) {
-        widthPic = 256;
-        countPic = 1;
-
+      if (window.screen.width < 1200 && window.screen.width > 767) {
+        widthPic = 298;
+        countPic = 2;
       } else {
-        widthPic = 300;
-        countPic = 4;
+        if (window.screen.width < 768) {
+          widthPic = 256;
+          countPic = 1;
+
+        } else {
+          widthPic = 300;
+          countPic = 4;
+        }
       }
     }
   };
@@ -121,16 +132,21 @@ membershipLink.onclick = function (evt) {
 
   var widthPic = 580;
   var countPic = 1;
-
+  var setCardWidth = function (item) {
+    console.log(item.style.width)
+    item.style.width = window.screen.width - (window.screen.width * 0.29) + 'px';
+    console.log('hru')
+  }
   var getParam = function () {
     if (window.screen.width < 1366 && window.screen.width > 767) {
       widthPic = 566;
       countPic = 1;
     } else {
       if (window.screen.width < 768) {
-        widthPic = 226;
+        widthPic = window.screen.width - (window.screen.width * 0.3);
         countPic = 1;
-
+        picsListEl.forEach(setCardWidth)
+        console.log('haha')
       } else {
         widthPic = 560;
         countPic = 1;

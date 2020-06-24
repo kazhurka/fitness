@@ -43,16 +43,18 @@
 }
 
 .try-for-free input {
+  border-radius: 0;
   box-sizing: border-box;
   width: 100%;
   padding-top: 9px;
-  padding-right: 10px;
+  padding-right: 5px;
   padding-bottom: 9px;
-  padding-left: 2px;
+  padding-left: 5px;
 
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #ffffff;
+  color: #ffffff;
 }
 
 .try-for-free input:hover {

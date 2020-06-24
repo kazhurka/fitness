@@ -18,10 +18,16 @@
   padding-top: 63px;
 }
 
+.promo__wrap {
+  position: relative;
+  display: flex;
+  align-items: center
+}
+
 .promo__services {
   position: absolute;
-  top: 302px;
-  left: 1.5%;
+  top: 240px;
+  left: -26.5%;
 }
 
 .promo__services p {
@@ -84,6 +90,18 @@
   text-decoration: none;
 }
 
+.promo__social-item:hover {
+  opacity: 70%;
+}
+
+.promo__social-item:hover:focus {
+  opacity: 70%;
+}
+
+.promo__social-item:active {
+  opacity: 50%;
+}
+
 .promo__social-item:last-of-type {
   margin-bottom: 0;
 }
@@ -124,8 +142,8 @@
   }
 
   .promo__services {
-    top: 204px;
-    left: 0;
+    top: 188px;
+    left: -24px;
   }
 }
 
@@ -148,7 +166,7 @@
   }
 
   .promo__services {
-    top: 193px;
+    top: 177px;
     left: 0;
   }
 }

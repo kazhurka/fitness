@@ -193,6 +193,12 @@
   margin-right: 0;
 }
 
+@media (max-width: 1300px) {
+  .trainers {
+    max-width: 860px;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .trainers {
     box-sizing: border-box;

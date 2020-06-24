@@ -1,12 +1,12 @@
 .social {
   outline: red;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  min-width: 107px;
+  flex-wrap: wrap;
 }
 
 .social__item {
+  margin-right: 20px;
   display: block;
 
   list-style: none;
@@ -16,6 +16,9 @@
   background-position: 0 0;
 }
 
+.social__item:last-of-type {
+  margin-right: 0;
+}
 .social__item:hover {
   opacity: 70%;
 }

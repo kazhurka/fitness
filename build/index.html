@@ -27,13 +27,15 @@
           <a href="#" class="promo__social-item">ig</a>
         </div>
         <div class="promo__container">
-          <div class="promo__services">
-            <p>Тренажёрный зал</p>
-            <p>Групповые занятия</p>
-            <p>Кардио-зона</p>
+          <div class="promo__wrap">
+            <div class="promo__services">
+              <p>Тренажёрный зал</p>
+              <p>Групповые занятия</p>
+              <p>Кардио-зона</p>
+            </div>
+            <h1 class="main-title"> <span>Омск</span> Фитнес центр</h1>
           </div>
-          <h1 class="main-title"> <span>Омск</span> Фитнес центр</h1>
-          <a href="#" class=" button promo__link">Купить абонемент</a>
+          <a href="#" class=" button promo__link" id="to-membership">Купить абонемент</a>
         </div>
         <picture>
           <source type="image/webp" srcset="img/supermen.webp 1x,
@@ -460,8 +462,8 @@
       <section class="try-for-free">
         <h2>Бесплатное занятие</h2>
         <form>
-          <label><input type="text" id="customer-name" placeholder="Имя" aria-label="Ваше имя"></label>
-          <label><input type="tel" id="customer-phone" placeholder="Телефон" aria-label="Ваш телефон"></label>
+          <label><input type="text" id="customer-name" placeholder="Имя" aria-label="Ваше имя" required=""></label>
+          <label><input type="tel" id="customer-phone" placeholder="Телефон" aria-label="Ваш телефон" required=""></label>
           <button type="submit">Отправить</button>
         </form>
       </section>
@@ -474,7 +476,7 @@
           </address>
           <div class="contacts__item contacts__item--phone">
             <b>Телефон:</b>
-            <a href="#">
+            <a href="tel:88005555555">
               8-800-555-55-55
             </a>
           </div>
@@ -484,7 +486,7 @@
           </div>
           <div class="contacts__item contacts__item--e-mail">
             <b>Email:</b>
-            <a href="#">
+            <a href="mailto:omsk@supergym.ru">
               omsk@supergym.ru
             </a>
           </div>
@@ -502,7 +504,7 @@
         <a href="#">
           Услуги
         </a>
-        <a href="#" id="to-membership">
+        <a href="#" id="to-membership-footer">
           Абонементы
         </a>
         <a href="#">
