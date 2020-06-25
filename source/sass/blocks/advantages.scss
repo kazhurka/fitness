@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding-top: 114px;
   padding-right: 10px;
-  padding-bottom: 47px;
+  padding-bottom: 43px;
   padding-left: 10px;
 
   outline: red;
@@ -41,8 +41,8 @@
   display: flex;
   box-sizing: border-box;
   width: 346px;
-  min-height: 224px;
-  padding-top: 64px;
+  min-height: 229px;
+  padding-top: 67px;
   padding-right: 5px;
   padding-bottom: 10px;
   padding-left: 165px;
@@ -68,7 +68,7 @@
 .advantages__item::before {
   content: "";
   position: absolute;
-  top: 29%;
+  top: 32%;
   left: 0;
 
   width: 180px;
@@ -159,15 +159,15 @@
 }
 
 .advantages__item--comfort::before {
-  left: 20px;
   top: 35%;
+  left: 20px;
 
   background-image: url("../img/occupancy.png");
 }
 
 .advantages__item--experience::before {
-  left: 7px;
   top: 35%;
+  left: 7px;
 
   background-image: url("../img/experience.png");
 }
@@ -194,7 +194,7 @@
     width: 768px;
     padding-top: 97px;
     padding-right: 45px;
-    padding-bottom: 67px;
+    padding-bottom: 65px;
     padding-left: 45px;
   }
 
@@ -220,7 +220,7 @@
   .advantages__item {
     width: 320px;
     min-height: 150px;
-    padding-top: 48px;
+    padding-top: 46px;
     padding-left: 117px;
   }
 
@@ -230,14 +230,16 @@
   }
 
   .advantages__item--parking {
-    padding-left: 87px;
     margin-bottom: 250px;
+    padding-left: 87px;
+
     border-bottom: none;
   }
 
   .advantages__item--square {
-    border-bottom: none;
     margin-bottom: 250px;
+
+    border-bottom: none;
   }
 
   .advantages__item--experience {
@@ -254,7 +256,7 @@
   }
 
   .advantages__item::before {
-    top: 37%;
+    top: 35%;
 
     width: 90px;
     height: 70px;
@@ -285,7 +287,7 @@
   }
 
   .advantages__highlight {
-    top: 427px;
+    top: 424px;
 
     width: 442px;
     height: 239px;
@@ -353,6 +355,7 @@
     margin-left: 0;
   }
 
+
   .advantages__item h3 {
     margin: 0 auto;
 
@@ -364,10 +367,19 @@
   }
 
   .advantages__highlight {
-    top: 658px;
+    top: 657px;
 
     width: 100%;
     margin-bottom: 50px;
+    padding-top: 30px;
+  }
+
+  .advantages__highlight p {
+    line-height: 84px;
+  }
+
+  .advantages__highlight-text p {
+    line-height: 24px;
   }
 
   .advantages__highlight span {
@@ -379,13 +391,13 @@
   }
 
   .advantages__item--square {
-    padding-top: 90px;
     margin-bottom: 0;
+    padding-top: 90px;
   }
 
   .advantages__item--parking {
-    padding-top: 80px;
     margin-bottom: 289px;
+    padding-top: 80px;
   }
 
   .advantages__item--comfort {
@@ -395,7 +407,7 @@
   }
 
   .advantages__item--experience {
-    padding-top: 64px;
+    padding-top: 65px;
   }
 
   .advantages__item--square::before {

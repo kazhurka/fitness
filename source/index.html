@@ -83,13 +83,14 @@
       <section class="membership">
         <h2>Абонементы</h2>
         <div class="membership__duration">
-          <div class="membership__button membership__button--active"><button> 1 месяц</button> </div>
-          <div class="membership__button "><button> 6 месяцев</button></div>
-          <div class="membership__button "><button> 12 месяцев</button></div>
+          <div  class="membership__button membership__button--active"><button data-tab="1"> 1 месяц</button> </div>
+          <div  class="membership__button "><button data-tab="2"> 6 месяцев</button></div>
+          <div  class="membership__button "><button data-tab="3"> 12 месяцев</button></div>
         </div>
         <div class="membership__offers">
-          <ul>
-            <li tabindex="-1">
+
+          <div data-tab-content="1" class="membership__pane membership__pane--active">
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>С тренером</h3>
                 <p>12 занятий</p>
@@ -101,8 +102,8 @@
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-            <li tabindex="-1">
+            </div>
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>Дневной</h3>
                 <p>с 8:00 до 17:00</p>
@@ -114,8 +115,8 @@
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-            <li tabindex="-1">
+            </div>
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>Полный день</h3>
                 <p>с 8:00 до 22:00</p>
@@ -124,12 +125,14 @@
                   <svg width="30" height="42" viewBox="0 0 30 42" fill="none">
                     <use xlink:href="img/sprite.svg#rub"></use>
                   </svg>
-
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-            <li tabindex="-1">
+            </div>
+          </div>
+
+          <div data-tab-content="2" class="membership__pane">
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>С тренером (6)</h3>
                 <p>12 занятий</p>
@@ -141,8 +144,8 @@
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-            <li tabindex="-1">
+            </div>
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>Дневной (6)</h3>
                 <p>с 8:00 до 17:00</p>
@@ -151,12 +154,11 @@
                   <svg width="30" height="42" viewBox="0 0 30 42" fill="none">
                     <use xlink:href="img/sprite.svg#rub"></use>
                   </svg>
-
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-            <li tabindex="-1">
+            </div>
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>Полный день(6)</h3>
                 <p>с 8:00 до 22:00</p>
@@ -168,21 +170,10 @@
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-            <li tabindex="-1">
-              <div class="membership__wrap">
-                <h3>С тренером(12)</h3>
-                <p>12 занятий</p>
-                <div class="membership__offers-price membership__offers-price--trainer">
-                  <p>5000</p>
-                  <svg width="30" height="42" viewBox="0 0 30 42" fill="none">
-                    <use xlink:href="img/sprite.svg#rub"></use>
-                  </svg>
-                </div>
-                <a href="#" class="membership__link">Купить абонемент</a>
-              </div>
-            </li>
-            <li tabindex="-1">
+            </div>
+          </div>
+          <div data-tab-content="3" class="membership__pane">
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>Дневной(12)</h3>
                 <p>с 8:00 до 17:00</p>
@@ -194,8 +185,8 @@
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-            <li tabindex="-1">
+            </div>
+            <div class="membership__offer">
               <div class="membership__wrap">
                 <h3>Полный день(12)</h3>
                 <p>с 8:00 до 22:00</p>
@@ -204,13 +195,24 @@
                   <svg width="30" height="42" viewBox="0 0 30 42" fill="none">
                     <use xlink:href="img/sprite.svg#rub"></use>
                   </svg>
-
                 </div>
                 <a href="#" class="membership__link">Купить абонемент</a>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+            <div class="membership__offer">
+              <div class="membership__wrap">
+                <h3>С тренером(12)</h3>
+                <p>12 занятий</p>
+                <div class="membership__offers-price membership__offers-price--trainer">
+                  <p>5000</p>
+                  <svg width="30" height="42" viewBox="0 0 30 42" fill="none">
+                    <use xlink:href="img/sprite.svg#rub"></use>
+                  </svg>
+                </div>
+                <a href="#" class="membership__link">Купить абонемент</a>
+              </div>
+            </div>
+          </div>
       </section>
     </div>
     <section class="crossfit">

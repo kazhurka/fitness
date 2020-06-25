@@ -20,8 +20,9 @@
 
 .promo__wrap {
   position: relative;
+
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .promo__services {
@@ -66,11 +67,11 @@
 }
 
 .promo__social {
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   order: 1;
+  padding-bottom: 50px;
 
   text-align: right;
 }

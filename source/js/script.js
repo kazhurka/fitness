@@ -2,7 +2,7 @@
 
 
 var membershipLink = document.querySelector('#to-membership');
-var membershipLinkFooter = document.querySelector('#to-membership-footer')
+var membershipLinkFooter = document.querySelector('#to-membership-footer');
 
 var scrollPageHandler = function (evt) {
   evt.preventDefault();
@@ -11,53 +11,32 @@ var scrollPageHandler = function (evt) {
     left: 0,
     behavior: 'smooth'
   });
-}
+};
 
 membershipLink.addEventListener('click', scrollPageHandler);
 membershipLinkFooter.addEventListener('click', scrollPageHandler);
 
 (function () {
-  var buttonsListEl = document.querySelectorAll('.membership__button');
-  var picsList = document.querySelector('.membership__offers ul');
+  var tabButtons = document.querySelectorAll('.membership__button button');
+  var tabPanes = document.querySelectorAll('.membership__pane');
 
+  for (var i = 0; i < tabButtons.length; i++) {
 
-  var position = 0;
-
-  var widthPic = 400;
-  var countPic = 3;
-
-  var getParam = function () {
-    if (window.screen.width < 1200 && window.screen.width > 767) {
-      widthPic = 488;
-    } else {
-      if (window.screen.width < 768) {
-        widthPic = 419;
-      } else {
-        widthPic = 400;
+    tabButtons[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var activeTabAttr = evt.target.getAttribute('data-tab');
+      for (var j = 0; j < tabButtons.length; j++) {
+        var contentAttr = tabPanes[j].getAttribute('data-tab-content');
+        if (activeTabAttr === contentAttr) {
+          tabButtons[j].parentNode.classList.add('membership__button--active');
+          tabPanes[j].classList.add('membership__pane--active');
+        } else {
+          tabButtons[j].parentNode.classList.remove('membership__button--active');
+          tabPanes[j].classList.remove('membership__pane--active');
+        }
       }
-    }
-  };
-
-
-  getParam();
-  buttonsListEl.forEach(function (item) {
-
-    item.onclick = function (evt) {
-      event.preventDefault();
-      var activePage = document.querySelector('.membership__button--active');
-      activePage.classList.remove('membership__button--active');
-      var buttonsListArr = Array.from(buttonsListEl);
-      position = -buttonsListArr.indexOf(evt.target.parentNode) * (widthPic * countPic);
-      if (screen.width > 1200) {
-        picsList.style.marginLeft = position + 'px';
-        evt.target.parentNode.classList.add('membership__button--active');
-      } else {
-        picsList.style.marginTop = position + 'px';
-        evt.target.parentNode.classList.add('membership__button--active');
-      }
-
-    };
-  });
+    });
+  }
 })();
 // trainers-slider
 
@@ -79,7 +58,6 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
     if (window.screen.width < 1300 && window.screen.width > 1200) {
       widthPic = 300;
       countPic = 3;
-      console.log('grt')
     } else {
       if (window.screen.width < 1200 && window.screen.width > 767) {
         widthPic = 298;
@@ -133,10 +111,8 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
   var widthPic = 580;
   var countPic = 1;
   var setCardWidth = function (item) {
-    console.log(item.style.width)
     item.style.width = window.screen.width - (window.screen.width * 0.29) + 'px';
-    console.log('hru')
-  }
+  };
   var getParam = function () {
     if (window.screen.width < 1366 && window.screen.width > 767) {
       widthPic = 566;
@@ -145,8 +121,7 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
       if (window.screen.width < 768) {
         widthPic = window.screen.width - (window.screen.width * 0.3);
         countPic = 1;
-        picsListEl.forEach(setCardWidth)
-        console.log('haha')
+        picsListEl.forEach(setCardWidth);
       } else {
         widthPic = 560;
         countPic = 1;

@@ -5,22 +5,22 @@
   margin: 0 auto;
   padding-top: 115px;
   padding-right: 10px;
-  padding-bottom: 115px;
+  padding-bottom: 80px;
   padding-left: 10px;
 }
 
 .membership__offers {
   z-index: 1;
 
-  height: 450px;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .membership::after {
   content: "";
   position: absolute;
   top: 32.7%;
-  right: 0%;
+  right: 0;
   z-index: 0;
 
   width: 287px;
@@ -46,9 +46,8 @@
   position: relative;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 352px;
+  width: 340px;
   margin: 0 auto;
   margin-bottom: 39px;
 }
@@ -63,6 +62,14 @@
   height: 3px;
 
   background-color: rgba(120, 120, 120, 0.2);
+}
+
+.membership__button {
+  margin-right: 48px;
+}
+
+.membership__button:last-of-type {
+  margin-right: 0;
 }
 
 .membership__button button {
@@ -101,32 +108,30 @@
   border-bottom: 2px solid #d10a42;
 }
 
-.membership__duration li .membership__duration li:last-of-type {
-  margin-right: 0;
+.membership__pane {
+  display: none;
+  flex-wrap: wrap;
 }
 
-.membership__offers ul {
-  width: 9999px;
-  margin: 0 auto;
-  padding: 0;
-
-  list-style: none;
-  font-size: 0;
-
-  transition: margin-left 250ms;
+.membership__pane--active {
+  display: flex;
 }
 
-.membership__offers li {
-  display: inline-block;
+.membership__offer {
   box-sizing: border-box;
   width: 360px;
   height: 448px;
   margin-right: 40px;
+  margin-bottom: 40px;
 
   background-color: #ffffff;
 }
 
-.membership__offers li:hover {
+.membership__offer:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.membership__offer:hover {
   background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
 }
 
@@ -136,12 +141,12 @@
   padding-bottom: 62px;
 }
 
-.membership__offers li:hover .membership__wrap {
+.membership__offer:hover .membership__wrap {
   background-color: white;
 }
 
 
-.membership__offers li:hover .membership__link {
+.membership__offer:hover .membership__link {
   width: 210px;
   height: 68px;
 
@@ -270,14 +275,13 @@
   .membership {
     box-sizing: border-box;
     min-width: 768px;
-    padding-top: 97px;
+    padding-top: 94px;
     padding-right: 5.8%;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     padding-left: 5.8%;
   }
 
   .membership__duration {
-    width: 345px;
     margin-bottom: 45px;
   }
 
@@ -286,10 +290,18 @@
   }
 
   .membership h2 {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
 
     font-size: 42px;
     line-height: 42px;
+  }
+
+  .membership__button {
+    margin-right: 60px;
+  }
+
+  .membership__button:last-of-type {
+    margin-right: 0;
   }
 
   .membership__button button {
@@ -298,20 +310,19 @@
 
   .membership__offers {
     width: 442px;
-    height: 1424px;
     margin: 0 auto;
   }
 
   .membership::after {
-    top: 40.3%;
+    top: 40.4%;
 
-    width: 358px;
+    width: 347px;
     height: 371px;
 
     background-image: url("../img/weight-tablet.png");
   }
 
-  .membership__offers li {
+  .membership__offer {
     width: 442px;
     height: 448px;
     margin-right: 0;
@@ -328,7 +339,7 @@
   }
 
   .membership__offers-price::after {
-    left: 109px;
+    left: 113px;
   }
 }
 
@@ -337,7 +348,7 @@
     min-width: 320px;
     padding-top: 68px;
     padding-right: 4.6%;
-    padding-bottom: 70px;
+    padding-bottom: 35px;
     padding-left: 4.6%;
   }
 
@@ -358,10 +369,9 @@
 
   .membership__offers {
     width: 290px;
-    height: 1222px;
   }
 
-  .membership__offers li {
+  .membership__offer {
     width: 290px;
     height: 384px;
     margin-bottom: 35px;
@@ -414,6 +424,14 @@
   .membership__duration {
     width: 290px;
     margin-bottom: 35px;
+  }
+
+  .membership__button {
+    margin-right: 47px;
+  }
+
+  .membership__button:last-of-type {
+    margin-right: 0;
   }
 
   .membership__button button {

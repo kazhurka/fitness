@@ -6,7 +6,7 @@
 }
 
 .social__item {
-  margin-right: 20px;
+  margin-right: 22px;
   display: block;
 
   list-style: none;
@@ -19,6 +19,7 @@
 .social__item:last-of-type {
   margin-right: 0;
 }
+
 .social__item:hover {
   opacity: 70%;
 }
@@ -51,6 +52,10 @@
 @media (max-width: $desktop-width) {
   .social {
     min-width: 100px;
+  }
+
+  .social__item {
+    margin-right: 18px;
   }
 }
 

@@ -22,7 +22,7 @@
 
 .info__video {
   position: absolute;
-  top: 400px;
+  top: 408px;
   left: 38%;
 
   width: 364px;
@@ -230,6 +230,7 @@
   }
 
   .info__video {
+    bottom: 0;
     position: relative;
     left: 0;
 
