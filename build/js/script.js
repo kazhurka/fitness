@@ -1,6 +1,64 @@
 'use strict';
 
+var posInit = 0;
+var posLastFinal = 0;
+var posFinal = 0;
+var DELTA = 25;
+var position = 0;
+var swipeEndWrapper = function () {};
 
+var moveToRight = function (widthPic, countPic, picsList, picsListEl) {
+  position -= widthPic * countPic;
+  position = Math.max(position, -widthPic * (picsListEl.length - countPic));
+  picsList.style.marginLeft = position + 'px';
+};
+
+var moveToLeft = function (widthPic, countPic, picsList) {
+  position += widthPic * countPic;
+  position = Math.min(position, 0);
+  picsList.style.marginLeft = position + 'px';
+};
+
+var getEvent = function () {
+  return event.type.search('touch') !== -1 ? event.touches[0] : event;
+};
+
+var swipeStartHandler = function (widthPic, countPic, picsList, picsListEl) {
+  var evt = getEvent();
+  posInit = evt.clientX;
+
+  swipeEndWrapper = function () {
+    swipeEndHandler(widthPic, countPic, picsList, picsListEl);
+  };
+
+  document.addEventListener('touchmove', swipeActionHandler);
+  document.addEventListener('touchend', swipeEndWrapper);
+};
+
+var swipeActionHandler = function () {
+  var evt = getEvent();
+  posFinal = evt.clientX;
+};
+
+var swipeEndHandler = function (widthPic, countPic, picsList, picsListEl) {
+  document.removeEventListener('touchmove', swipeActionHandler);
+  document.removeEventListener('touchend', swipeEndWrapper);
+
+  var posDelta = posLastFinal !== posFinal ? posInit - posFinal : 0;
+  posLastFinal = posFinal;
+
+  if (Math.abs(posDelta) < DELTA) {
+    return;
+  }
+
+  if (posDelta > 0) {
+    moveToRight(widthPic, countPic, picsList, picsListEl);
+  } else {
+    moveToLeft(widthPic, countPic, picsList);
+  }
+};
+
+// page-scroll
 var membershipLink = document.querySelector('#to-membership');
 var membershipLinkFooter = document.querySelector('#to-membership-footer');
 
@@ -16,6 +74,7 @@ var scrollPageHandler = function (evt) {
 membershipLink.addEventListener('click', scrollPageHandler);
 membershipLinkFooter.addEventListener('click', scrollPageHandler);
 
+// membership-slider
 (function () {
   var tabButtons = document.querySelectorAll('.membership__button button');
   var tabPanes = document.querySelectorAll('.membership__pane');
@@ -38,9 +97,11 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
     });
   }
 })();
-// trainers-slider
 
+
+// trainers-slider
 (function () {
+
   var slider = document.querySelector('.trainers');
   var picsList = document.querySelector('.trainers__members ul');
   var picsListEl = document.querySelectorAll('.trainers__members li');
@@ -48,8 +109,6 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
   if (!(slider && picsList && picsListEl)) {
     return;
   }
-
-  var position = 0;
 
   var widthPic = 300;
   var countPic = 2;
@@ -77,21 +136,21 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
 
   getParam();
 
+  window.onresize = function () {
+    getParam();
+  };
 
   slider.querySelector('.trainers__button--left button').onclick = function () {
-    position += widthPic * countPic;
-    position = Math.min(position, 0);
-    picsList.style.marginLeft = position + 'px';
-
+    moveToLeft(widthPic, countPic, picsList);
   };
 
   slider.querySelector('.trainers__button--right button').onclick = function () {
-    position -= widthPic * countPic;
-    position = Math.max(position, -widthPic * (picsListEl.length - countPic));
-    picsList.style.marginLeft = position + 'px';
+    moveToRight(widthPic, countPic, picsList, picsListEl);
   };
 
-
+  slider.addEventListener('touchstart', function () {
+    swipeStartHandler(widthPic, countPic, picsList, picsListEl);
+  });
 })();
 
 
@@ -106,13 +165,12 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
     return;
   }
 
-  var position = 0;
-
   var widthPic = 580;
   var countPic = 1;
   var setCardWidth = function (item) {
     item.style.width = window.screen.width - (window.screen.width * 0.29) + 'px';
   };
+
   var getParam = function () {
     if (window.screen.width < 1366 && window.screen.width > 767) {
       widthPic = 566;
@@ -131,19 +189,20 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
 
   getParam();
 
+  window.onresize = function () {
+    getParam();
+  };
 
   slider.querySelector('.reviews__button--left button').onclick = function () {
-    position += widthPic * countPic;
-    position = Math.min(position, 0);
-    picsList.style.marginLeft = position + 'px';
-
+    moveToLeft(widthPic, countPic, picsList);
   };
 
   slider.querySelector('.reviews__button--right button').onclick = function () {
-    position -= widthPic * countPic;
-    position = Math.max(position, -widthPic * (picsListEl.length - countPic));
-    picsList.style.marginLeft = position + 'px';
+    moveToRight(widthPic, countPic, picsList, picsListEl);
   };
 
+  slider.addEventListener('touchstart', function () {
+    swipeStartHandler(widthPic, countPic, picsList, picsListEl);
+  });
 
 })();
