@@ -165,7 +165,7 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
     return;
   }
 
-  var widthPic = 580;
+  var widthPic = 560;
   var countPic = 1;
   var setCardWidth = function (item) {
     item.style.width = window.screen.width - (window.screen.width * 0.29) + 'px';
@@ -177,7 +177,7 @@ membershipLinkFooter.addEventListener('click', scrollPageHandler);
       countPic = 1;
     } else {
       if (window.screen.width < 768) {
-        widthPic = window.screen.width - (window.screen.width * 0.3);
+        widthPic = Math.round(window.screen.width - (window.screen.width * 0.29));
         countPic = 1;
         picsListEl.forEach(setCardWidth);
       } else {
